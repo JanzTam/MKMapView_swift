@@ -4,7 +4,7 @@ Build:Swift 2.0 , Xcode 7.1
 
 **tips**
 
-if your Xcode project only used Swift,you should set [Build settings->Embedded Content Contains Swift Code] 'yes'.
+if your Xcode project only used Swift,you should set 【Build settings->Embedded Content Contains Swift Code】~~'no'~~ 'yes'.
 
 # Location
 ### asks user permission
@@ -23,13 +23,17 @@ I try ro add one key ,  however it is not even asks user permission. I add all t
 ### CLLocationManager
 
 ```objc
-
 self.locateManage.delegate = self //请求定位权限
 
- if self.locateManage.respondsToSelector(Selector("requestAlwaysAuthorization")) {
-            self.locateManage.requestAlwaysAuthorization()
-        }
+if self.locateManage.respondsToSelector(Selector("requestAlwaysAuthorization")) {
+     self.locateManage.requestAlwaysAuthorization()
+}
         
- self.locateManage.desiredAccuracy = kCLLocationAccuracyBest//定位精准度
- self.locateManage.startUpdatingLocation()//开始定位
- ```
+self.locateManage.desiredAccuracy = kCLLocationAccuracyBest//定位精准度
+self.locateManage.startUpdatingLocation()//开始定位
+```
+### extension
+add MKMapView extension
+```objc
+func setCenterCoordinateLevel(centerCoordinate:CLLocationCoordinate2D,var zoomLevel:Double,animated:Bool) 
+```
