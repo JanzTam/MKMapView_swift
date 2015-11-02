@@ -1,9 +1,10 @@
 # MKMapView_swift
 Swift CLLocationManager demo,and show userLocation in mapView.
+Build:Swift 2.0 , Xcode 7.1
 
 **tips**
 
-if your Xcode project just used Swift,you should set [Build settings->Embedded Content Contains Swift Code] 'yes'.
+if your Xcode project only used Swift,you should set [Build settings->Embedded Content Contains Swift Code] 'yes'.
 
 # Location
 ### asks user permission
